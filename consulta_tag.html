@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Responsive admin dashboard and web application ui kit. ">
+    <meta name="keywords" content="blank, starter">
+
+    <title>Bayer &mdash; Systema Ganado</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,300i" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="assets/css/core.min.css" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet">
+    <link href="assets/css/style.min.css" rel="stylesheet">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="icon" href="assets/img/favicon.png">
+  </head>
+
+  <body>
+
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="spinner-dots">
+        <span class="dot1"></span>
+        <span class="dot2"></span>
+        <span class="dot3"></span>
+      </div>
+    </div>
+
+
+    <!-- Sidebar -->
+    <aside class="sidebar sidebar-icons-left sidebar-light sidebar-color-info sidebar-expand-lg">
+      <header class="sidebar-header" style="background-color: white;color:#888888">
+        <a class="logo-icon" href="#"><img src="assets/img/logoResized.png" alt="logo icon"></a>
+        <span class="sidebar-toggle-fold"></span>
+      </header>
+
+      <nav class="sidebar-navigation">
+        <li class="menu-category">Preview</li>
+
+        <ul class="menu">
+          <li class="menu-item">
+            <a class="menu-link" href="index.html">
+              <span class="icon fa fa-home"></span>
+              <span class="title">Dashboard</span>
+            </a>
+          </li>
+
+          <li class="menu-item">
+            <a class="menu-link" href="ingreso.html">
+              <span class="icon fa fa-edit"></span>
+              <span class="title">Ingreso</span>
+            </a>
+          </li>
+
+          <li class="menu-item active">
+            <a class="menu-link" href="#">
+              <span class="icon fa fa-search"></span>
+              <span class="title">Consulta</span>
+              <span class="arrow"></span>
+
+            </a>
+
+            <ul class="menu-submenu">
+              <li class="menu-item">
+                <a class="menu-link" href="#">
+                  <span class="dot"></span>
+                  <span class="title">Por Tag</span>
+                </a>
+              </li>
+
+              <li class="menu-item">
+                <a class="menu-link" href="consulta_lote.html">
+                  <span class="dot"></span>
+                  <span class="title">Por Lote</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link" href="login.html">
+              <span class="icon fa fa-sign-out"></span>
+              <span class="title">Salir</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </aside>
+    <!-- END Sidebar -->
+
+    <!-- Topbar -->
+    <header class="topbar topbar-inverse bg-info">
+      <div class="topbar-left">
+        <span class="topbar-btn sidebar-toggler"><i>&#9776;</i></span>
+	<span class="sidebar-toggler"><img src="assets/img/logoTop.png"></span>
+	&nbsp;&nbsp;&nbsp;
+      </div>
+
+      <div class="topbar-right">
+        <ul class="topbar-btns">
+
+          <!-- Notifications -->
+          <li class="dropdown d-none d-md-block">
+            <span class="topbar-btn has-new" data-toggle="dropdown"><i class="ti-bell"></i></span>
+            <div class="dropdown-menu dropdown-menu-right">
+
+              <div class="media-list media-list-hover media-list-divided media-list-xs">
+                <a class="media media-new" href="#">
+                  <span class="avatar bg-success"><i class="ti-user"></i></span>
+                  <div class="media-body">
+                    <p>New user registered</p>
+                    <time datetime="2017-07-14 20:00">Just now</time>
+                  </div>
+                </a>
+
+                <a class="media" href="#">
+                  <span class="avatar bg-info"><i class="ti-shopping-cart"></i></span>
+                  <div class="media-body">
+                    <p>New order received</p>
+                    <time datetime="2017-07-14 20:00">2 min ago</time>
+                  </div>
+                </a>
+
+                <a class="media" href="#">
+                  <span class="avatar bg-warning"><i class="ti-face-sad"></i></span>
+                  <div class="media-body">
+                    <p>Refund request from <b>Ashlyn Culotta</b></p>
+                    <time datetime="2017-07-14 20:00">24 min ago</time>
+                  </div>
+                </a>
+
+                <a class="media" href="#">
+                  <span class="avatar bg-primary"><i class="ti-money"></i></span>
+                  <div class="media-body">
+                    <p>New payment has made through PayPal</p>
+                    <time datetime="2017-07-14 20:00">53 min ago</time>
+                  </div>
+                </a>
+              </div>
+
+              <div class="dropdown-footer">
+                <div class="left">
+                  <a href="#">Read all notifications</a>
+                </div>
+
+                <div class="right">
+                  <a href="#" data-provide="tooltip" title="Mark all as read"><i class="fa fa-circle-o"></i></a>
+                  <a href="#" data-provide="tooltip" title="Update"><i class="fa fa-repeat"></i></a>
+                  <a href="#" data-provide="tooltip" title="Settings"><i class="fa fa-gear"></i></a>
+                </div>
+              </div>
+
+            </div>
+          </li>
+          <!-- END Notifications -->
+
+        </ul>
+	<span><img src="assets/img/logoMetra.png"></span>
+
+      </div>
+    </header>
+    <!-- END Topbar -->
+
+     <!-- Main container -->
+    <main class="main-container">
+      <header class="header" style="margin-bottom:0px;">
+        <div class="header-bar">
+          <h2>Búsqueda por Tag</h2>
+          
+        </div>
+      </header>
+
+      <div class="main-content">
+          <div class="card">
+
+              <div class="card-body">
+                <table class="table table-responsive col-md-12" data-provide="datatables" id="table-cows">
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>Tag</th>
+                      <th>Lote</th>
+                      <th>Corral</th>
+                      <th>Proveniente</th>
+                      <th>Peso</th>
+                      <th>Enfermería</th>
+                      <th>Acciones</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>FAD1234</td>
+                      <td>1423</td>
+                      <td>20</td>
+                      <td>RegioEngorda</td>
+                      <td>700kg</td>
+                      <td>Si</td>
+                      <td>
+                        <i class="fa fa-heartbeat hover-danger" data-toggle="modal" data-target="#modal-center" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+
+                        
+
+
+
+                        <a href="expediente.html" class="table-action hover-danger">
+                          <i class="fa fa-file-pdf-o" style="font-size: 25px;">&nbsp;&nbsp;&nbsp;</i>
+                        </a>
+
+                        <i class="fa fa-remove hover-danger" data-toggle="modal" data-target="#modal-center2" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+                        
+
+
+
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>FAD1234</td>
+                      <td>1423</td>
+                      <td>20</td>
+                      <td>RegioEngorda</td>
+                      <td>750kg</td>
+                      <td>No</td>
+                      <td>
+                        <i class="fa fa-heartbeat hover-danger" data-toggle="modal" data-target="#modal-center" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+                        <a href="expediente.html" class="table-action hover-danger">
+                          <i class="fa fa-file-pdf-o" style="font-size: 25px;">&nbsp;&nbsp;&nbsp;</i>
+                        </a>
+                        
+                        <i class="fa fa-remove hover-danger" data-toggle="modal" data-target="#modal-center2" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>FBD1234</td>
+                      <td>1423</td>
+                      <td>20</td>
+                      <td>RegioEngorda</td>
+                      <td>720kg</td>
+                      <td>No</td>
+                      <td>
+                        <i class="fa fa-heartbeat hover-danger" data-toggle="modal" data-target="#modal-center" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+                        <a href="expediente.html" class="table-action hover-danger">
+                          <i class="fa fa-file-pdf-o" style="font-size: 25px;">&nbsp;&nbsp;&nbsp;</i>
+                        </a>
+                        
+                        <i class="fa fa-remove hover-danger" data-toggle="modal" data-target="#modal-center2" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">4</th>
+                      <td>FAD7534</td>
+                      <td>1423</td>
+                      <td>20</td>
+                      <td>RegioEngorda</td>
+                      <td>790kg</td>
+                      <td>No</td>
+                      <td>
+                        <i class="fa fa-heartbeat hover-danger" data-toggle="modal" data-target="#modal-center" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+                        <a href="expediente.html" class="table-action hover-danger">
+                          <i class="fa fa-file-pdf-o" style="font-size: 25px;">&nbsp;&nbsp;&nbsp;</i>
+                        </a>
+                        
+                        <i class="fa fa-remove hover-danger" data-toggle="modal" data-target="#modal-center2" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">5</th>
+                      <td>FAD1654</td>
+                      <td>1424</td>
+                      <td>21</td>
+                      <td>RegioEngorda</td>
+                      <td>730kg</td>
+                      <td>si</td>
+                      <td>
+                        <i class="fa fa-heartbeat hover-danger" data-toggle="modal" data-target="#modal-center" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+                        <a href="expediente.html" class="table-action hover-danger">
+                          <i class="fa fa-file-pdf-o" style="font-size: 25px;">&nbsp;&nbsp;&nbsp;</i>
+                        </a>
+                        
+                        <i class="fa fa-remove hover-danger" data-toggle="modal" data-target="#modal-center2" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">6</th>
+                      <td>FAD1264</td>
+                      <td>1424</td>
+                      <td>21</td>
+                      <td>RegioEngorda</td>
+                      <td>700kg</td>
+                      <td>Si</td>
+                      <td>
+                        <i class="fa fa-heartbeat hover-danger" data-toggle="modal" data-target="#modal-center" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+                        <a href="expediente.html" class="table-action hover-danger">
+                          <i class="fa fa-file-pdf-o" style="font-size: 25px;">&nbsp;&nbsp;&nbsp;</i>
+                        </a>
+                        
+                        <i class="fa fa-remove hover-danger" data-toggle="modal" data-target="#modal-center2" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">7</th>
+                      <td>FAD1114</td>
+                      <td>1424</td>
+                      <td>21</td>
+                      <td>RegioEngorda</td>
+                      <td>710kg</td>
+                      <td>No</td>
+                      <td>
+                        <i class="fa fa-heartbeat hover-danger" data-toggle="modal" data-target="#modal-center" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+                        <a href="expediente.html" class="table-action hover-danger">
+                          <i class="fa fa-file-pdf-o" style="font-size: 25px;">&nbsp;&nbsp;&nbsp;</i>
+                        </a>
+                        
+                        <i class="fa fa-remove hover-danger" data-toggle="modal" data-target="#modal-center2" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">8</th>
+                      <td>FAD7567</td>
+                      <td>1425</td>
+                      <td>22</td>
+                      <td>RegioEngorda</td>
+                      <td>700kg</td>
+                      <td>No</td>
+                      <td>
+                        <i class="fa fa-heartbeat hover-danger" data-toggle="modal" data-target="#modal-center" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+                        <a href="expediente.html" class="table-action hover-danger">
+                          <i class="fa fa-file-pdf-o" style="font-size: 25px;">&nbsp;&nbsp;&nbsp;</i>
+                        </a>
+                        
+                        <i class="fa fa-remove hover-danger" data-toggle="modal" data-target="#modal-center2" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">9</th>
+                      <td>FAD1666</td>
+                      <td>1425</td>
+                      <td>22</td>
+                      <td>RegioEngorda</td>
+                      <td>810kg</td>
+                      <td>No</td>
+                      <td>
+                        <i class="fa fa-heartbeat hover-danger" data-toggle="modal" data-target="#modal-center" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+                        <a href="expediente.html" class="table-action hover-danger">
+                          <i class="fa fa-file-pdf-o" style="font-size: 25px;">&nbsp;&nbsp;&nbsp;</i>
+                        </a>
+                        
+                        <i class="fa fa-remove hover-danger" data-toggle="modal" data-target="#modal-center2" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">10</th>
+                      <td>FAD4444</td>
+                      <td>1425</td>
+                      <td>22</td>
+                      <td>RegioEngorda</td>
+                      <td>750kg</td>
+                      <td>Si</td>
+                      <td>
+                        <i class="fa fa-heartbeat hover-danger" data-toggle="modal" data-target="#modal-center" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+                        <a href="expediente.html" class="table-action hover-danger">
+                          <i class="fa fa-file-pdf-o" style="font-size: 25px;">&nbsp;&nbsp;&nbsp;</i>
+                        </a>
+                        
+                        <i class="fa fa-remove hover-danger" data-toggle="modal" data-target="#modal-center2" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">11</th>
+                      <td>FAD1555</td>
+                      <td>1426</td>
+                      <td>23</td>
+                      <td>RegioEngorda</td>
+                      <td>710kg</td>
+                      <td>No</td>
+                      <td>
+                        <i class="fa fa-heartbeat hover-danger" data-toggle="modal" data-target="#modal-center" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+                        <a href="expediente.html" class="table-action hover-danger">
+                          <i class="fa fa-file-pdf-o" style="font-size: 25px;">&nbsp;&nbsp;&nbsp;</i>
+                        </a>
+                        
+                        <i class="fa fa-remove hover-danger" data-toggle="modal" data-target="#modal-center2" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">12</th>
+                      <td>FAD1434</td>
+                      <td>1426</td>
+                      <td>23</td>
+                      <td>RegioEngorda</td>
+                      <td>880kg</td>
+                      <td>No</td>
+                      <td>
+                        <i class="fa fa-heartbeat hover-danger" data-toggle="modal" data-target="#modal-center" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+                        <a href="expediente.html" class="table-action hover-danger">
+                          <i class="fa fa-file-pdf-o" style="font-size: 25px;">&nbsp;&nbsp;&nbsp;</i>
+                        </a>
+                        
+                        <i class="fa fa-remove hover-danger" data-toggle="modal" data-target="#modal-center2" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th scope="row">13</th>
+                      <td>FAD3334</td>
+                      <td>1426</td>
+                      <td>23</td>
+                      <td>RegioEngorda</td>
+                      <td>790kg</td>
+                      <td>No</td>
+                      <td>
+                        <i class="fa fa-heartbeat hover-danger" data-toggle="modal" data-target="#modal-center" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+
+                        <a href="expediente.html" class="table-action hover-danger">
+                          <i class="fa fa-file-pdf-o" style="font-size: 25px;">&nbsp;&nbsp;&nbsp;</i>
+                        </a>
+                        
+                        <i class="fa fa-remove hover-danger" data-toggle="modal" data-target="#modal-center2" style="font-size: 25px; cursor: pointer;">&nbsp;&nbsp;&nbsp;</i>
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+
+              </div>
+            </div>
+
+
+            <div class="modal modal-center fade" id="modal-center" tabindex="-1" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Enviar a Enfermería</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form >
+                    <div class="col-md-10">
+                      
+
+                      <div class="form-group">
+                          <label class="require" for="input-required">Peso</label>
+                          <input type="text" class="form-control" id="input-required" name="peso">
+                      </div>
+                    </div>
+
+                    <div class="col-md-10">
+                      
+
+                      <div class="form-group">
+                          <label class="require" for="input-required">Temperatura</label>
+                          <input type="text" class="form-control" id="input-required" name="temperatura">
+                      </div>
+                    </div>
+
+                    <div class="col-md-10">
+                      <label class="require" for="input-required">Padecimiento</label>
+                      <div class="form-group">
+                        
+                        <div class="btn-group bootstrap-select show-tick">
+                          <select data-provide="selectpicker" multiple="" data-actions-box="true" class="" tabindex="-98" title="Nada Seleccionado">
+                            <option>Garraptas</option>
+                            <option>Digestivo</option>
+                            <option>Moquillo</option>
+                            <option>Locomotor</option>
+                            <option>Nervioso</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-10">
+                      <label class="require" for="input-required">Medicamento</label>
+                      <div class="form-group">
+                        
+                        <div class="btn-group bootstrap-select show-tick">
+                          <select data-provide="selectpicker" multiple="" data-actions-box="true" class="" tabindex="-98" title="Nada Seleccionado">
+                            <option>Fluxabac LA 1/10</option>
+                            <option>Tetraback LA 1/10</option>
+                            <option>Baytril Max LA 1/13.5</option>
+                            <option>Fluxavet 2/45</option>
+                            <option>Dipirona 4x50</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-10">
+                      <label class="require" for="input-required">Tratamiento</label>
+                      <div class="form-group">
+                        
+                        <div class="btn-group bootstrap-select show-tick">
+                          <select data-provide="selectpicker"  data-actions-box="true" class="" tabindex="-98" title="Nada Seleccionado">
+                            <option>Primero</option>
+                            <option>Segudo</option>
+                            <option>Tercero</option>
+                            <option>Cuarto</option>
+                            <option>Quinto</option>
+                            <option>Sexto</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    <br>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="reset" class="btn btn-bold btn-secondary">Cancelar</button>
+                    <button type="button" class="btn btn-bold btn-primary" data-dismiss="modal">Siguiente</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="modal modal-center fade" id="modal-center2" tabindex="-1" style="display: none;" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title">Mermar Lote</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p style="text-align: center; font-size: 150%">¿Está seguro que quiere mermar esta vaca?</p>
+                    <br><br><br><br><br><br>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-bold btn-secondary" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-bold btn-primary" data-dismiss="modal">Aceptar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
+      </div><!--/.main-content -->
+
+
+
+   
+
+
+      <!-- Footer -->
+      <footer class="site-footer">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="text-center text-md-left">Copyright © 2017 <a href="https://www.bayer.com/">Bayer AG</a>. All rights reserved.</p>
+          </div>
+
+          <div class="col-md-6">
+            <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Condiciones Generales de uso</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Aviso de privacidad</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Imprint</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- END Footer -->
+
+    </main>
+    <!-- END Main container -->
+
+
+
+    <!-- Global quickview -->
+    <div id="qv-global" class="quickview" data-url="assets/data/quickview-global.html">
+      <div class="spinner-linear">
+        <div class="line"></div>
+      </div>
+    </div>
+    <!-- END Global quickview -->
+
+    <!-- Scripts -->
+    <script src="assets/js/core.min.js"></script>
+    <script src="assets/js/app.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+      });
+    </script>
+
+  </body>
+</html>
