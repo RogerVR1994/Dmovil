@@ -5,17 +5,12 @@
 #include "SoftwareSerial.h"
 
 char numero_cell[]="+14433455571";//meter numero de telefono Tropo1
-//char numero_cell[]="+14382281357";//meter numero de telefono Tropo2
-//char numero_cell[]="5554181711";//meter numero de telefono Roger
-//char numero_cell[]="+17864540964";//meter numero de telefono Arranz
-//char numero_cell[]="5543595053";//meter numero de telefono Anibal
-//char numero_cell[]="+14089098523";//meter numero de telefono Plivo
 
 String cargo = "";
 String nip = "1234";
 String contra = "";
-const byte ROWS = 4; //four rows
-const byte COLS = 4; //four columns
+const byte ROWS = 4; 
+const byte COLS = 4; 
 char contrasena[4] = {1,2,3,4};
 char login[4];
 char keys[ROWS][COLS] = {
@@ -24,16 +19,13 @@ char keys[ROWS][COLS] = {
   {'7','8','9','C'},
   {'*','0','#','D'}
 };
-//byte rowPins[ROWS] = {13, 12, 11, 10}; //connect to the row pinouts of the keypad
-//byte colPins[COLS] = {9, 8, 7, 6}; //connect to the column pinouts of the keypad
 
-byte rowPins[ROWS] = {10, 9, 8, 7}; //connect to the row pinouts of the keypad
-byte colPins[COLS] = {11, 12, 3,2}; //connect to the column pinouts of the keypad
+byte rowPins[ROWS] = {10, 9, 8, 7}; 
+byte colPins[COLS] = {11, 12, 3,2}; 
 
 Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 
-LiquidCrystal_PCF8574 lcd(0x27);  // set the LCD address to 0x27 for a 16 chars and 2 line display
-
+LiquidCrystal_PCF8574 lcd(0x27);  
 FPS_GT511C3 fps(16,17);
 SoftwareSerial Uc20(5, 6); //rX, tX -->En BB-9
 
@@ -71,7 +63,7 @@ void setup()
   Wire.begin();
   Wire.beginTransmission(0x27);
   error = Wire.endTransmission();
-  lcd.begin(16, 2); // initialize the lcd
+  lcd.begin(16, 2);
   show = 0;
   inicio();
 } 
@@ -398,15 +390,15 @@ void sesion_FPS(){
 String sendATCommand(String command, int ms) {
   char c;
   String res;
-  Uc20.println(command);     // Send request
-  int count = 5;                       // Number of 100ms intervals before 
-                                       // assuming there is no more data
-  while(count-- != 0) {                // Loop until count = 0
+  Uc20.println(command);    
+  int count = 5;                      
+                                       
+  while(count-- != 0) {              
 
-    delay(100);                        // Delay 100ms
+    delay(100);                      
 
-    while (Uc20.available() > 0){  // If there is data, read it and reset
-       c = (char)Uc20.read();      // the counter, otherwise go try again
+    while (Uc20.available() > 0){  
+       c = (char)Uc20.read();     
        res += c;
        count = 5;        
     }
