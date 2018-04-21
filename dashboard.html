@@ -145,7 +145,7 @@
             <div class="card">
               <h3 class="card-title">Mi Rendimiento</h3>
               <div class="card-body">
-                <div id="myfirstchart" style="height: 250px;">
+                <div id="myfirstchart1" style="height: 250px;">
                   
                 </div>
               </div>
@@ -250,45 +250,5 @@
       resize: true
     });
   </script>
-  <script>
-    new Morris.Line({
-      // ID of the element in which to draw the chart.
-      element: 'myfirstchart1',
-      // Chart data records -- each entry in this array corresponds to a point on
-      // the chart.
-      data: [
-        { year: '2008', value: 70 },
-        { year: '2009', value: 75 },
-        { year: '2010', value: 68 },
-        { year: '2011', value: 69 },
-        { year: '2012', value: 73 },
-        { year: '2013', value: 79 },
-        { year: '2014', value: 82 },
-        { year: '2015', value: 84 },
-        { year: '2016', value: 81 },
-        { year: '2017', value: 87 }
-      ],
-      // The name of the data record attribute that contains x-values.
-      xkey: 'year',
-      // A list of nayear of data record attributes that contain y-values.
-      ykeys: ['value'],
-      // Labels for the ykeys -- will be displayed when you hover over the
-      // chart.
- 
-      resize: true
-    });
-  </script>
-  <script>
-   Morris.Donut({
-  element: 'donut-example',
-  data: [
-    {label: "Fallos Nov", value: 3},
-    {label: "Ciclos Terminados", value: 3000}
-  ],
-  colors:["#ff6666", "#0090c5"],
-  resize: "true"
-});
-  </script>
-
   </body>
 </html>
