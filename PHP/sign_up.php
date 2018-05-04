@@ -14,7 +14,6 @@
   $email=$_POST["email"];
   $password=$_POST["password"];
   $key="yumyum"; //Llave para encriptar contraseñas
-  $num = 908.80;
 
   $check_user_query = $link->query("SELECT correo as mail FROM Usuarios WHERE correo ='".$email."' ");//Query para comprobar existencia de usuario
 
