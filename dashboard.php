@@ -1,3 +1,22 @@
+<?php
+  require_once 'config.php';
+  $result = false;
+  if(!empty($_POST)){
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $password = md5($_POST["password"]);
+    
+    $sql = "INSERT INTO blog(name, email, password) VALUES (:name, :email, :password)";
+    $query = $pdo->prepare($sql);
+    $result = $query->execute([
+      'name'=> $name,
+      'email' => $email,
+      'password' => $password
+    ]);
+    var_dump($result);
+  }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -56,36 +75,6 @@
             </a>
           </li>
 
-          <li class="menu-item">
-            <a class="menu-link" href="#">
-              <span class="icon fa fa-edit"></span>
-              <span class="title">Mis Transacciones</span>
-              <span class="arrow"></span>
-            </a>
-
-            <ul class="menu-submenu">
-              <li class="menu-item">
-                <a class="menu-link" href="escribir_digitales.html">
-                  <span class="dot"></span>
-                  <span class="title">Pagos</span>
-                </a>
-              </li>
-
-              <li class="menu-item">
-                <a class="menu-link" href="escribir_analogas.html">
-                  <span class="dot"></span>
-                  <span class="title">Recibos</span>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="menu-item">
-            <a class="menu-link" href="#">
-              <span class="icon fa fa-dashboard"></span>
-              <span class="title">Configurar mi Cuenta</span>
-            </a>
-          </li>
 
           <li class="menu-item">
             <a class="menu-link" href="login">
@@ -131,7 +120,7 @@
       </header>
       <div class="main-content">
         <div class="row">
-          <div class="col-md-2">
+          <div class="col-md-6">
             <div class="card">
               <h3 class="card-title">Mi Saldo</h3>
               <div class="card-body">
@@ -141,24 +130,67 @@
               </div>
             </div>
           </div>
-          <div class="col-md-10">
-            <div class="card">
-              <h3 class="card-title">Mi Rendimiento</h3>
-              <div class="card-body">
-                <div id="myfirstchart1" style="height: 250px;">
-                  
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-12">
+          <div class="col-md-6">
             <div class="card">
               <h3 class="card-title">Mi Estado de Cuenta</h3>
               <div class="card-body">
-                <div style="height: 250px;">
-                  
-                </div>
+                <table class="table">
+                  <thead>
+                    <th scope="col">ID Transacción</th>
+                    <th scope="col">Concepto</th>
+                    <th scope="col">Importe</th>
+                    <th scope="col">Fecha</th>
+                  </thead>  
+                  <tbody>
+                    <tr>
+                      <th scope="row">1483</th>
+                      <td>Depósito</td>
+                      <td>$ 2435.50</td>
+                      <td>3 de Mayo de 2018</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">1852</th>
+                      <td>Depósito</td>
+                      <td>$ 495.00</td>
+                      <td>2 de Mayo de 2018</td>
+                    </tr>
+
+                    <tr>
+                      <th scope="row">1983</th>
+                      <td>Retiro</td>
+                      <td>$ 125.00</td>
+                      <td>1 de Mayo de 2018</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="card">
+              <h3>Depositar a una cuenta</h3>
+              <form action="dashboard.php" method="post">
+                <div class="form-group">
+                  <label for="NumeroCuenta">Número de Cuenta</label>
+                  <input type="text" name="NumeroCuenta" id="NumeroCuenta">
+                  <br>
+                  <label for="Cantidad">Monto</label>
+                  <input type="text" name="Cantidad" id="Cantidad">
+                  <br>
+                  <label for="banco">Banco</label>
+                  <select class="form-control" id="banco">
+                    <option>Banamex</option>
+                    <option>Bancomer</option>
+                    <option>Gentera</option>
+                    <option>ScotiaBank</option>
+                    <option>Banco Azteca</option>
+                  </select>
+                  <br>
+                  <button type="submit" class="btn btn-primary">Aceptar</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
