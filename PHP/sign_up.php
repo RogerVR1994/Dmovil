@@ -6,9 +6,9 @@
   ini_set('display_errors', 1);
   ini_set('display_startup_errors', 1);
   error_reporting(E_ALL);
-  include "../../../connect.php"; //Correr código de incio de sesión en MySQL
+  require_once "../../../connect.php"; //Correr código de incio de sesión en MySQL
 
-  $link=db_Connection(); //Crear conexión MySQL
+
 
   $command = escapeshellcmd("python3 ../Python/user.py"); //Correr código en Python para crear ID único de usuario
   $user = shell_exec($command); //Obtener respuesta de código de Python
