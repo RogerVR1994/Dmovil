@@ -17,7 +17,7 @@
   $banco = $_POST['banco'];
   foreach($_POST as $post){
     echo $post;
-    echo "\n";
+    echo '<br>';
   }
 
   $key="yumyum"; //Llave para encriptar contraseñas
