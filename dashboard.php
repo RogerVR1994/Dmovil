@@ -1,20 +1,7 @@
-<?php
+<?php 
   require_once 'config.php';
-  $result = false;
-  if(!empty($_POST)){
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $password = md5($_POST["password"]);
-    
-    $sql = "INSERT INTO blog(name, email, password) VALUES (:name, :email, :password)";
-    $query = $pdo->prepare($sql);
-    $result = $query->execute([
-      'name'=> $name,
-      'email' => $email,
-      'password' => $password
-    ]);
-    var_dump($result);
-  }
+
+  $queryResult = $pdo->query("SELECT saldo as saldo from Usuarios where nombre = 'Rogelio'");
 ?>
 
 <!DOCTYPE html>
@@ -125,7 +112,7 @@
               <h3 class="card-title">Mi Saldo</h3>
               <div class="card-body">
                 <div style="height: 100px;">
-                  <h1 style="text-align: center;  font-size: 40px;">$ 2,534.44</h1>
+                  <h1 style="text-align: center;  font-size: 40px;">$ <?php echo '<p>'.$queryResult.'</p>'; ?></h1>
                 </div>
               </div>
             </div>
