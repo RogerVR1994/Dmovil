@@ -23,12 +23,16 @@
 
   if (mysqli_num_rows($check_user_query) == 0) { //Si el correo no existe en la base de datos se agregan todos los datos correspondientes a la tabla
 
-    $stmt = $link->prepare("INSERT INTO usuarios VALUES (NULL, NULL, ?, ?, ?, ?, ?, AES_ENCRYPT(?, ?)");
-    echo $stmt;
-    $stmt->bind_param("sssssss", $nombre, $apellido, $cuenta, $banco, $email, $password, $key);
-    $stmt->execute();
-    $stmt->close();//Cerrar conexiones de MySQL
-    $link->close();
+    $sql = "INSERT INTO usuarios(NOMBRE, APELLIDO, CUENTA, BANCO, EMAIL, PASSWORD) VALUES (:nombre, :apellido, :cuenta, :banco, :email, :password)";
+    $query = $pdo->prepare($sql);
+    $result = $query->execute([
+      'nombre'=> $nombre,
+      'apellido' => $apellido,
+      'cuenta' => $cuenta,
+      'banco' => $banco, 
+      'email' => $email,
+      'password' => $password
+    ]);
     header("Location: ../dashboard.php"); //redirección a página de inicio
   } 
 
