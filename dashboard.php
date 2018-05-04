@@ -122,7 +122,7 @@ include "../../connect.php";
               <h3 class="card-title">Mi Saldo</h3>
               <div class="card-body">
                 <div style="height: 100px;">
-                  <h1 style="text-align: center;  font-size: 40px;">$ <?php echo '<p>'.$saldo.'</p>'; ?></h1>
+                  <h1 style="text-align: center;  font-size: 40px;"><?php echo '<p>$ '.$saldo.'</p>'; ?></h1>
                 </div>
               </div>
             </div>
