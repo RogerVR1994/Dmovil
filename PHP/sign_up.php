@@ -33,6 +33,7 @@
       'email' => $email,
       'password' => $password
     ]);
+    var_dump($result);
     header("Location: ../dashboard.php"); //redirección a página de inicio
   } 
 
