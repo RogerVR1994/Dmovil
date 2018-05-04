@@ -8,7 +8,7 @@ include "../../connect.php";
 <?php 
   if($result!==FALSE){
      while($row = $result->fetch_assoc()) {
-        $row = $result['saldo'];
+        $saldo = $row['saldo'];
      }
      $link->close();
   }
