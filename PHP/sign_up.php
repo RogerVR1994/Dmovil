@@ -20,7 +20,7 @@
 
   if (mysqli_num_rows($check_user_query) == 0) { //Si el correo no existe en la base de datos se agregan todos los datos correspondientes a la tabla
     echo "vacio";
-    $stmt = $link->prepare("INSERT INTO Usuarios(user, nombre, apellido, email, password) VALUES (?, ?, ?, ?, AES_ENCRYPT(?, ?))");
+    $stmt = $link->prepare("INSERT INTO Usuarios (user, nombre, apellido, email, password) VALUES (?, ?, ?, ?, AES_ENCRYPT(?, ?))");
     $stmt->bind_param("ssssss", $user, $nombre, $apellido, $email, $password, $key);
     $stmt->execute();
     $stmt->close();//Cerrar conexiones de MySQL
