@@ -13,7 +13,7 @@ u<?php
   echo "\n";
 
 
-  $check_user_query = $link->query("SELECT AES_DECRYPT(password, 'yumyum') as password FROM Usuarios WHERE email ='".$email."' ");
+  $check_user_query = $link->query("SELECT AES_DECRYPT(password, 'yumyum') as password FROM Usuarios WHERE mail ='".$email."' ");
 
 
   if (mysqli_num_rows($check_user_query) == 0) { 
