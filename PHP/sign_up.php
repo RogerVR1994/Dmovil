@@ -15,6 +15,8 @@
   $password=$_POST["password"];
   $cuenta = $_POST['cuenta'];
   $banco = $_POST['banco'];
+  echo $cuenta;
+  echo $banco;
   $key="yumyum"; //Llave para encriptar contraseñas
 
   $check_user_query = $link->query("SELECT EMAIL as mail FROM usuarios WHERE EMAIL ='".$email."' ");//Query para comprobar existencia de usuario
