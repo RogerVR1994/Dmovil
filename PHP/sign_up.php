@@ -13,15 +13,17 @@
   $apellido=$_POST["apellido"];
   $email=$_POST["email"];
   $password=$_POST["password"];
+  $cuenta = $_POST['cuenta'];
+  $banco = $_POST['banco'];
   $key="yumyum"; //Llave para encriptar contraseñas
 
-  $check_user_query = $link->query("SELECT correo as mail FROM Usuarios WHERE correo ='".$email."' ");//Query para comprobar existencia de usuario
+  $check_user_query = $link->query("SELECT EMAIL as mail FROM usuarios WHERE EMAIL ='".$email."' ");//Query para comprobar existencia de usuario
 
 
   if (mysqli_num_rows($check_user_query) == 0) { //Si el correo no existe en la base de datos se agregan todos los datos correspondientes a la tabla
     echo "vacio";
-    $stmt = $link->prepare("INSERT INTO Usuarios VALUES (?, ?, ?, ?, AES_ENCRYPT(?, ?))");
-    $stmt->bind_param("ssssss", $user, $nombre, $apellido, $email, $password, $key);
+    $stmt = $link->prepare("INSERT INTO usuarios VALUES (?, ?, ?, ?, ?, AES_ENCRYPT(?, ?)");
+    $stmt->bind_param("sssssss", $nombre, $apellido, $cuenta, $banco, $email, $password, $key);
     $stmt->execute();
     $stmt->close();//Cerrar conexiones de MySQL
     $link->close();
