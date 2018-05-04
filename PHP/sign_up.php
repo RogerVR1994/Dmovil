@@ -26,7 +26,7 @@
     $stmt->execute();
     $stmt->close();//Cerrar conexiones de MySQL
     $link->close();
-    header("Location: ../dashboard.html"); //redirección a página de inicio
+    header("Location: ../dashboard.php"); //redirección a página de inicio
   } 
 
   else { //Si el correo ya existe en la tabla de datos se envía mensaje de error para ingresar otro correo
