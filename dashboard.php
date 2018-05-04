@@ -1,7 +1,17 @@
-<?php 
-  require_once 'config.php';
+<?php
+include "../../connect.php";
+  
+  $link= db_Connection();
+  $result= $link->query("SELECT saldo as saldo from Usuarios where nombre = 'Rogelio'");
+?>
 
-  $queryResult = $pdo->query("SELECT saldo as saldo from Usuarios where nombre = 'Rogelio'");
+<?php 
+  if($result!==FALSE){
+     while($row = $result->fetch_assoc()) {
+        $saldo = $result['saldo'];
+     }
+     $link->close();
+  }
 ?>
 
 <!DOCTYPE html>
@@ -112,7 +122,7 @@
               <h3 class="card-title">Mi Saldo</h3>
               <div class="card-body">
                 <div style="height: 100px;">
-                  <h1 style="text-align: center;  font-size: 40px;">$ <?php echo '<p>'.$queryResult.'</p>'; ?></h1>
+                  <h1 style="text-align: center;  font-size: 40px;">$ <?php echo '<p>'.$saldo.'</p>'; ?></h1>
                 </div>
               </div>
             </div>
