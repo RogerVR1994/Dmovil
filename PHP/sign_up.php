@@ -3,6 +3,9 @@
   /*
   Código para registrar nuevo usuario y comprobar existencia
   */
+  ini_set('display_errors', 1);
+  ini_set('display_startup_errors', 1);
+  error_reporting(E_ALL);
   include "../../../connect.php"; //Correr código de incio de sesión en MySQL
 
   $link=db_Connection(); //Crear conexión MySQL
