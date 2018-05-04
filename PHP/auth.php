@@ -29,7 +29,7 @@ u<?php
     }
 
     if ($password==$pass){
-    	header("Location: ../dashboard.html");
+    	header("Location: ../dashboard.php");
     }
 
     else{
