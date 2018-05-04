@@ -25,7 +25,6 @@
 
   $key="yumyum"; //Llave para encriptar contraseñas
 
-  $check_user_query = $link->query("SELECT EMAIL as mail FROM usuarios WHERE EMAIL ='".$email."' ");//Query para comprobar existencia de usuario
 
 
   if (mysqli_num_rows($check_user_query) == 0) { //Si el correo no existe en la base de datos se agregan todos los datos correspondientes a la tabla
