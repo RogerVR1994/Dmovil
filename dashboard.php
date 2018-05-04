@@ -168,13 +168,13 @@ include "../../connect.php";
           <div class="col-md-12">
             <div class="card">
               <h3>Depositar a una cuenta</h3>
-              <form action="dashboard.php" method="post">
+              <form action="PHP/depositar.php" method="post">
                 <div class="form-group">
                   <label for="NumeroCuenta">Número de Cuenta</label>
                   <input type="text" name="NumeroCuenta" id="NumeroCuenta">
                   <br>
                   <label for="Cantidad">Monto</label>
-                  <input type="text" name="Cantidad" id="Cantidad">
+                  <input type="text" name="monto" id="Cantidad">
                   <br>
                   <label for="banco">Banco</label>
                   <select class="form-control" id="banco">
@@ -237,43 +237,5 @@ include "../../connect.php";
     <script src="assets/js/core.min.js"></script>
     <script src="assets/js/app.min.js"></script>
     <script src="assets/js/script.min.js"></script>
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-      });
-    </script>
-        <script>
-    new Morris.Line({
-      // ID of the element in which to draw the chart.
-      element: 'myfirstchart1',
-      // Chart data records -- each entry in this array corresponds to a point on
-      // the chart.
-      data: [
-        { year: '2008', value: 101 },
-        { year: '2009', value: 85 },
-        { year: '2010', value: 120 },
-        { year: '2011', value: 103 },
-        { year: '2012', value: 94 },
-        { year: '2013', value: 81 },
-        { year: '2014', value: 77 },
-        { year: '2015', value: 68 },
-        { year: '2016', value: 70 },
-        { year: '2017', value: 42 }
-      ],
-      // The name of the data record attribute that contains x-values.
-      ykeys: ['a'],
-      labels: ['Individual'],
-      pointSize: 3,
-      fillOpacity: 0,
-      pointStrokeColors: ['#9966ff'],
-      behaveLikeLine: true,
-      gridLineColor: '#ebebeb',
-      lineWidth: 1,
-      hideHover: 'auto',
-      lineColors: ['#9966ff'],
-      resize: true
-    });
-  </script>
-
   </body>
 </html>
